@@ -1,1 +1,0 @@
-:- forall(solve([[man, fox, hare, lettuce], []], X), writeln(X)).

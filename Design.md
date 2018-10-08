@@ -1,5 +1,5 @@
 In order to run the prolog grader script, you will need four things:
-1. the grader script itself (grader.zsh)
+1. the grader script itself (grader.py)
 2. the prolog submission file to be graded (\*problem\*.pl)
 3. the prolog driver function file (driver-{0..9}.pl)
 4. the expected output (solution) file to the driver function (solution-{0..9}.out)
