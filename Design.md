@@ -13,6 +13,5 @@ file, but add a number to the back and change `.pl` to `.out`).
 Then the script will compare the `.out` outputs with the correct outputs. It will then
 write a score summary for each of the submission file.
 
-The two said parts shall be in separate functions in the zsh script. The person writing
-and maintaining the script shall have basic shell knowledge. Minimum prolog 
-knowledge is required.
+The person writing and maintaining the script shall have basic shell knowledge. 
+Minimum prolog knowledge is required.
