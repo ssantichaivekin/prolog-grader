@@ -19,20 +19,21 @@ Make sure you also have `swipl` command installed.
 
 Look at the demo-problem1 folder. Inside the folder you will see:
 1. Two student submissions **student1-problem1.pl** and **student1-problem1.pl**.
-For a file to be considered submission, it must have the word **problem** in
-it and must end with .pl extension. 
-2. In the folder **tests**, you will see two test cases, named *testA* and *testB*.
+For a file to be considered a submission, it must have the word "problem" in
+it and must end with ".pl" extension. 
+2. In the folder **tests**, you will see two test cases, named **testA** and **testB**.
 These tests have their respective driver **pl** file and solution file and solution
 **txt** file. Note the the driver files and the solution files must have a **similar**
 name. The driver files must contain the word **driver** and the solution file
 must contain the word **solution**. The driver files are the files that runs after 
-the assignment to produce theoutput.
+the assignment to produce the output.
 
 The prolog grader will go through each problem submission, grade them against
 each pair of driver and solution, and then produce a summary file.
 
-If you run `zsh grader.zsh ./demo-problem1`, it will populate the folder to become
-like the folder *after-demo-problem1** and print the following:
+If you run `zsh grader.zsh ./demo-problem1`, it will populate the folder with 
+grading results to become like the folder **after-demo-problem1** and print the
+following:
 ```
 ##### Grading submission: ./demo/student1-problem1.pl #####
 CorrectTests: 1 / 2
