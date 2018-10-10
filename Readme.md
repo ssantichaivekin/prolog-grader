@@ -1,4 +1,4 @@
-# A zsh prolog grader.
+A zsh prolog grader.
 
 Run by calling `zsh grader.zsh [folder_to_be_graded]`. Assuming that you
 have the files in the correct places, it will output something like this:
