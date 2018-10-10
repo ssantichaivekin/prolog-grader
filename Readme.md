@@ -11,6 +11,16 @@ CorrectTests: [score] / [total score]
 ```
 and store the output of test cases in a folder for each student submission.
 
+If you clone the repository and run `zsh grader.zsh ./demo-problem1`, it will 
+populate the folder with grading results to become like the folder **after-demo-problem1** 
+and print the following:
+```
+##### Grading submission: ./demo/student1-problem1.pl #####
+CorrectTests: 1 / 2
+##### Grading submission: ./demo/student2-problem1.pl #####
+CorrectTests: 2 / 2
+```
+
 ## Dependencies
 
 zsh, swipl, timeout.
@@ -47,23 +57,18 @@ the assignment to produce the output.
 The prolog grader will go through each problem submission, grade them against
 each pair of driver and solution, and then produce a summary file.
 
-If you run `zsh grader.zsh ./demo-problem1`, it will populate the folder with 
-grading results to become like the folder **after-demo-problem1** and print the
-following:
-```
-##### Grading submission: ./demo/student1-problem1.pl #####
-CorrectTests: 1 / 2
-##### Grading submission: ./demo/student2-problem1.pl #####
-CorrectTests: 2 / 2
-```
-
 Remark :
 1. If you are working on windows, the grader probably wouldn't work.
 2. The folder of driver and solutions must be named **tests**.
 3. If you have a predefined helper function, save it alongside the problems and name it
-`helper.pl` or anything that has the word helper and has a .pl extension. `hahahahelper.pl`
+`helper.pl` or any name that has the word **helper** and has a .pl extension. `hahahahelper.pl`
 will also work. If you have many helpers, they will get called in alphabetical order.
 4. This grader have not been rigorously tested. In fact, it has not been tested at all.
+
+## Todo
+
+1. Kye suggests that instead of namimg that files **problem**, **helper**, **driver**, and **solution**,
+we should have four folders for each components.
 
 
 
