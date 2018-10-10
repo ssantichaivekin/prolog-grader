@@ -79,7 +79,6 @@ run-and-grade-all () {
     gradingDir=${1:-'./'}
     # get all the helper files
     helperFiles=( ${gradingDir}/helpers/*.pl(N) )
-    echo ${helperFiles}
     mkdir -p ${gradingDir}/results
     # for each problem submission in the current directory
     for submission in ${gradingDir}/submissions/*.pl ; do
@@ -104,7 +103,6 @@ run-and-grade-all () {
             errDest=${submissionFolder}/${testDriver:t:s/driver/errors/:s/pl/txt/}
             run-prolog ${helperFiles} ${submission} ${testDriver} \
                             1> ${outDest} 2> ${errDest}
-            echo ${helperFiles} ${submission} ${testDriver}
             # if the submission output is the same as the expected
             # output, we add the score, if not, just add the total
             if similar-text ${outDest} ${testSolution} >/dev/null ; then
