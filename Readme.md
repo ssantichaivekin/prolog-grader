@@ -1,12 +1,12 @@
 A zsh prolog grader.
 
 Run by calling `zsh grader.zsh [folder_to_be_graded]`. Assuming that you
-have the files in the correct places, it will output:
+have the files in the correct places, it will output something like this:
 ```
-##### Grading submission: ??? #####
-CorrectTests: ? / ?
-##### Grading submission: ??? #####
-CorrectTests: ? / ?
+##### Grading submission: [submission file name] #####
+CorrectTests: [score] / [total score]
+##### Grading submission: [submission file name] #####
+CorrectTests: [score] / [total score]
 ...
 ```
 
