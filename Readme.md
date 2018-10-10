@@ -12,14 +12,23 @@ CorrectTests: [score] / [total score]
 
 ## Dependencies
 
-swipl, timeout.
+zsh, swipl, timeout.
 
-If you are working on Mac, you must first install timeout to make this
-work. Timeout is used to time the execution of prolog files to make sure
+If you are working on Mac, you must first install zsh and timeout to make this
+work. Run `brew install zsh`.
+
+Timeout is used to time the execution of prolog files to make sure
 it is not running into an infinite loop. If you already have homebrew
 installed, run `brew install coreutils`.
 
-Make sure you also have `swipl` command installed.
+Make sure you also have `swipl` command installed and accessible by zsh.
+If you have prolog installed but cannot access it by the command line,
+try adding 
+```
+# install prolog
+PATH=$PATH:/Applications/SWI-Prolog.app/Contents/MacOS
+```
+into your ~/.bash_profile and ~/.zshrc.
 
 ## How to use / How it works
 
