@@ -28,7 +28,7 @@ try adding
 # install prolog
 PATH=$PATH:/Applications/SWI-Prolog.app/Contents/MacOS
 ```
-into your ~/.bash_profile and ~/.zshrc.
+into your ~/.bash_profile and ~/.zshrc
 
 ## How to use / How it works
 
