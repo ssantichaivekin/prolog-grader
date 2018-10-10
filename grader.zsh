@@ -69,9 +69,9 @@ run-prolog () {
 # return true of two texts are similar
 # use awk.
 similar-text () {
-    # use awk to format both text files
-
+    # use awk to format both text files and then
     # use diff to see whether they are equal
+    diff =( awk 'length {$1=$1;print}' $1 ) =( awk 'length {$1=$1;print}' $2 ) 2>&-
 }
 
 run-and-grade-all () {
@@ -83,12 +83,17 @@ run-and-grade-all () {
     for submission in ${gradingDir}/*problem*.pl ; do
         # create a folder to store that person's result
         submissionFolder=${submission:s/driver/}
+        # create a summary file
+        summaryFile=${submissionFolder}/summary.txt
+        echo 'Grading for' ${summaryFile} ':'
         echo '#####' 'Grading submission:' ${submission:s/driver/} '#####'
         # set the counters to 0
         (( countCorrectTest = 0 ))
         (( countTotalTest = 0 ))
         # for each pair of test case driver/solution file in test directory
         for testDriver in ${gradingDir}/tests/*driver*.pl ; do
+            # create and write to summary file
+            echo ${testDriver} > ${summaryFile}
             # find the test solution (expected output) by changing the word 
             # driver to solution. the solution should be a text file.
             testSolution=${testDriver:s/driver/solution:s/pl/txt}
@@ -102,11 +107,13 @@ run-and-grade-all () {
             if similar-text ${outDest} ${errDest} ; then
                 (( countCorrectTest += 1))
                 (( countTotalTest += 1))
+                echo 'PASS' > ${summaryFile}
             else
                 (( countTotalTest += 1))
+                echo 'FAIL' > ${summaryFile}
             fi
         done
-        echo 'CorrectTests:' ${countCorrectTest} '/' ${countTotalTest}
+        echo 'CorrectTests:' ${countCorrectTest} '/' ${countTotalTest} > ${summaryFile}
     done
 }
 
