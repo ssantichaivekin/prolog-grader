@@ -1,0 +1,7 @@
+Summary for ./demo/student2-problem1.pl
+./demo/tests/testA-driver.pl
+PASS
+./demo/tests/testB-driver.pl
+PASS
+
+CorrectTests: 2 / 2
