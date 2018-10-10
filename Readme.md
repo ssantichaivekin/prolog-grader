@@ -10,12 +10,18 @@ CorrectTests: ? / ?
 ...
 ```
 
+## Dependencies
+
+swipl, timeout.
+
 If you are working on Mac, you must first install timeout to make this
 work. Timeout is used to time the execution of prolog files to make sure
 it is not running into an infinite loop. If you already have homebrew
 installed, run `brew install coreutils`.
 
 Make sure you also have `swipl` command installed.
+
+## How to use / How it works
 
 Look at the demo-problem1 folder. Inside the folder you will see:
 1. Two student submissions **student1-problem1.pl** and **student1-problem1.pl**.
