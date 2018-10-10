@@ -40,7 +40,7 @@ PATH=$PATH:/Applications/SWI-Prolog.app/Contents/MacOS
 ```
 to your ~/.bash_profile and ~/.zshrc
 
-## How to use / How it works
+## How to use
 
 Look at the structure of the folder in **demo**.
 The folder has four parts helpers, submissions, drivers, and solutions.
@@ -114,11 +114,9 @@ g
 CorrectTests: 1 / 3
 ```
 
-Remark :
-1. Becareful! This grader is very sensitive to filenames and file
-   extensions. Use .pl and .txt extensions only.
-2. If you are working on windows, the grader probably wouldn't work.
-3. This grader has not been rigorously tested.
+## Remark
+1. If you are working on windows, the grader probably wouldn't work.
+2. This grader have not been rigorously tested. In fact, it has not been tested at all.
 
 
 
