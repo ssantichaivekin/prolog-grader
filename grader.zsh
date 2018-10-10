@@ -31,10 +31,10 @@ check-requirement () {
 check-driver-solution () {
     gradingDir=${1:-'.'}
     requirementsSatisfied='true'
-    for testDriver in ${gradingDir}/tests/*driver*.pl ; do
-        # find the test solution (expected output) by changing the word 
-        # driver to solution. the solution should be a text file.
-        testSolution=${testDriver:s/driver/solution/:s/pl/txt/}
+    for testDriver in ${gradingDir}/drivers/*.pl ; do
+        # find the test solution (expected output) by looking
+        # for a file with the same name but with .txt extension
+        testSolution=${testDriver:s/drivers/solutions/:s/pl/txt/}
         # if the solution does not exist for that test, skip
         if [[ ! -a ${testSolution} ]] ; then
             echo "${testDriver} has no matching solution"
@@ -78,11 +78,12 @@ run-and-grade-all () {
     # recieve the directory as grading, the default is ./
     gradingDir=${1:-'./'}
     # get all the helper files
-    helperFiles=( ${gradingDir}/*helper*.pl(N) ${gradingDir}/tests/*helper*.pl(N) )
+    helperFiles=( ${gradingDir}/helpers/*.pl(N) )
+    mkdir -p ${gradingDir}/results
     # for each problem submission in the current directory
-    for submission in ${gradingDir}/*problem*.pl ; do
+    for submission in ${gradingDir}/submissions/*.pl ; do
         # create a folder to store that person's result
-        submissionFolder=${submission:s/.pl//}
+        submissionFolder=${gradingDir}/results/${submission:t:s/.pl//}
         mkdir -p ${submissionFolder}
         # create a summary file
         summaryFile=${submissionFolder}/summary.txt
@@ -92,12 +93,12 @@ run-and-grade-all () {
         (( countCorrectTest = 0 ))
         (( countTotalTest = 0 ))
         # for each pair of test case driver/solution file in test directory
-        for testDriver in ${gradingDir}/tests/*driver*.pl ; do
+        for testDriver in ${gradingDir}/drivers/*.pl ; do
             # create and write to summary file
-            echo ${testDriver} >> ${summaryFile}
+            echo 'test file:' ${testDriver} >> ${summaryFile}
             # find the test solution (expected output) by changing the word 
             # driver to solution. the solution should be a text file.
-            testSolution=${testDriver:s/driver/solution/:s/pl/txt/}
+            testSolution=${testDriver:s/drivers/solutions/:s/pl/txt/}
             outDest=${submissionFolder}/${testDriver:t:s/driver/output/:s/pl/txt/}
             errDest=${submissionFolder}/${testDriver:t:s/driver/errors/:s/pl/txt/}
             run-prolog ${helperFiles} ${submission} ${testDriver} \

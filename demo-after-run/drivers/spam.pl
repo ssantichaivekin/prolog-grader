@@ -1,0 +1,1 @@
+:- forall(spam(X), writeln(X)).

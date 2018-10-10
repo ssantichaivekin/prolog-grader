@@ -1,0 +1,1 @@
+spam(X) :- isAlphabet(X).
