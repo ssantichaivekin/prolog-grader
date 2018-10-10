@@ -1,0 +1,3 @@
+Warning: /Users/santisantichaivekin/Desktop/code/prolog-grader/demo-after-run/submissions/student2.pl:1:
+	Redefined static procedure isAlphabet/1
+	Previously defined at /Users/santisantichaivekin/Desktop/code/prolog-grader/demo-after-run/helpers/spamhelp.pl:2

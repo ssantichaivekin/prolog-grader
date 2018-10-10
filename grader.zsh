@@ -99,8 +99,8 @@ run-and-grade-all () {
             # find the test solution (expected output) by changing the word 
             # driver to solution. the solution should be a text file.
             testSolution=${testDriver:s/drivers/solutions/:s/pl/txt/}
-            outDest=${submissionFolder}/${testDriver:t:s/driver/output/:s/pl/txt/}
-            errDest=${submissionFolder}/${testDriver:t:s/driver/errors/:s/pl/txt/}
+            outDest=${submissionFolder}/${testDriver:t:s/.pl//}-out.txt
+            errDest=${submissionFolder}/${testDriver:t:s/.pl//}-err.txt
             run-prolog ${helperFiles} ${submission} ${testDriver} \
                             1> ${outDest} 2> ${errDest}
             # if the submission output is the same as the expected
