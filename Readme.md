@@ -1,6 +1,14 @@
 A zsh prolog grader.
 
-If you are working on windows, tthe grader probably wouldn't work.
+Run by calling `zsh grader.zsh [folder_to_be_graded]`. Assuming that you
+have the files in the correct places, it will output:
+```
+##### Grading submission: ??? #####
+CorrectTests: ? / ?
+##### Grading submission: ??? #####
+CorrectTests: ? / ?
+...
+```
 
 If you are working on Mac, you must first install timeout to make this
 work. Timeout is used to time the execution of prolog files to make sure
@@ -33,8 +41,9 @@ CorrectTests: 2 / 2
 ```
 
 Remark :
-1. The folder of driver and solutions must be named **tests**.
-2. This grader have not been rigorously tested. In fact, it has not been tested at all.
+1. If you are working on windows, the grader probably wouldn't work.
+2. The folder of driver and solutions must be named **tests**.
+3. This grader have not been rigorously tested. In fact, it has not been tested at all.
 
 
 
