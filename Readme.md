@@ -46,17 +46,17 @@ Look at the structure of the folder in **demo**.
 The folder has four parts helpers, submissions, drivers, and solutions.
 We will explain what one should put in each folder.
 1. Put all your prolog helper files in helpers. The helpers will get run in
-alphabetical order. Note that due to [how prolog works](http://www.swi-prolog.org/FAQ/Multifile.html),
-you cannot **define** the same predicates in different files.
-In CS81, DFA assignment, one would create a `DFAaccepts.pl` file in the
-helper folder containing
+    alphabetical order. Note that due to [how prolog works](http://www.swi-prolog.org/FAQ/Multifile.html),
+    you cannot define the same predicates in different files.
+    In CS81, DFA assignment, one would create a `DFAaccepts.pl` file in the
+    helper folder containing
     ```prolog
     accepts(Q, []) :- accepting(Q).
     accepts(Q, [Symbol | Rest]) :- transition(Q, Symbol, NewQ), accepts(NewQ, Rest).
     ```
 2. Put the student submissions in submissions folder.
 3. Put your driver (tester) prolog files in the drivers folder. These files contain
-command(s) to print to stdout like
+    command(s) to print to stdout like
     ```prolog
     :- forall(spam(X), writeln(X)).
     ```
@@ -115,8 +115,10 @@ CorrectTests: 1 / 3
 ```
 
 Remark :
-1. If you are working on windows, the grader probably wouldn't work.
-2. This grader has not been rigorously tested.
+1. Becareful! This grader is very sensitive to filenames and file
+   extensions. Use .pl and .txt extensions only.
+2. If you are working on windows, the grader probably wouldn't work.
+3. This grader has not been rigorously tested.
 
 
 
