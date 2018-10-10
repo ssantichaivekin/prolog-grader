@@ -50,7 +50,10 @@ CorrectTests: 2 / 2
 Remark :
 1. If you are working on windows, the grader probably wouldn't work.
 2. The folder of driver and solutions must be named **tests**.
-3. This grader have not been rigorously tested. In fact, it has not been tested at all.
+3. If you have a predefined helper function, save it alongside the problems and name it
+`helper.pl` or anything that has the word helper and has a .pl extension. `hahahahelper.pl`
+will also work. If you have many helpers, they will get called in alphabetical order.
+4. This grader have not been rigorously tested. In fact, it has not been tested at all.
 
 
 

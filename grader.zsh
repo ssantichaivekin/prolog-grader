@@ -78,7 +78,7 @@ run-and-grade-all () {
     # recieve the directory as grading, the default is ./
     gradingDir=${1:-'./'}
     # get all the helper files
-    helperFiles=( ${gradingDir}/*helper*.pl(N) )
+    helperFiles=( ${gradingDir}/*helper*.pl(N) ${gradingDir}/tests/*helper*.pl(N) )
     # for each problem submission in the current directory
     for submission in ${gradingDir}/*problem*.pl ; do
         # create a folder to store that person's result
