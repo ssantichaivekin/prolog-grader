@@ -116,7 +116,7 @@ CorrectTests: 1 / 3
 
 Remark :
 1. If you are working on windows, the grader probably wouldn't work.
-2. This grader have not been rigorously tested. In fact, it has not been tested at all.
+2. This grader has not been rigorously tested.
 
 
 
