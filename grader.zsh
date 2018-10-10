@@ -92,9 +92,9 @@ run-and-grade-all () {
         # set the counters to 0
         (( countCorrectTest = 0 ))
         (( countTotalTest = 0 ))
-        # for each pair of test case driver/solution file in test directory
+        # for each pair of test case driver/solution files
         for testDriver in ${gradingDir}/drivers/*.pl ; do
-            # create and write to summary file
+            # write which test we are grading
             echo 'test file:' ${testDriver} >> ${summaryFile}
             # find the test solution (expected output) by changing the word 
             # driver to solution. the solution should be a text file.
