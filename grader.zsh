@@ -66,7 +66,7 @@ run-prolog () {
     ${timeoutcmd} 15s swipl --quiet -t halt -s $@
 }
 
-# return true of two texts are similar
+# return true if two texts are similar
 # use awk.
 similar-text () {
     # use awk to format both text files and then
@@ -92,15 +92,15 @@ run-and-grade-all () {
         # set the counters to 0
         (( countCorrectTest = 0 ))
         (( countTotalTest = 0 ))
-        # for each pair of test case driver/solution file in test directory
+        # for each pair of test case driver/solution files
         for testDriver in ${gradingDir}/drivers/*.pl ; do
-            # create and write to summary file
+            # write which test we are grading
             echo 'test file:' ${testDriver} >> ${summaryFile}
             # find the test solution (expected output) by changing the word 
             # driver to solution. the solution should be a text file.
             testSolution=${testDriver:s/drivers/solutions/:s/pl/txt/}
-            outDest=${submissionFolder}/${testDriver:t:s/driver/output/:s/pl/txt/}
-            errDest=${submissionFolder}/${testDriver:t:s/driver/errors/:s/pl/txt/}
+            outDest=${submissionFolder}/${testDriver:t:s/.pl//}-out.txt
+            errDest=${submissionFolder}/${testDriver:t:s/.pl//}-err.txt
             run-prolog ${helperFiles} ${submission} ${testDriver} \
                             1> ${outDest} 2> ${errDest}
             # if the submission output is the same as the expected
