@@ -35,7 +35,7 @@ installed, run `brew install coreutils`.
 Make sure you also have `swipl` command installed and accessible by zsh.
 If you have swipl prolog installed but cannot access it by the command line,
 try adding this line
-```
+```zsh
 PATH=$PATH:/Applications/SWI-Prolog.app/Contents/MacOS
 ```
 to your ~/.bash_profile and ~/.zshrc
@@ -46,7 +46,7 @@ Look at the structure of the folder in **demo**.
 The folder has four parts helpers, submissions, drivers, and solutions.
 We will explain what one should put in each folder.
 1. Put all your prolog helper files in helpers. The helpers will get run in
-alphabetical order. Note that due to (how prolog works)[http://www.swi-prolog.org/FAQ/Multifile.html],
+alphabetical order. Note that due to [how prolog works](http://www.swi-prolog.org/FAQ/Multifile.html),
 you cannot **define** the same predicates in different files.
 In CS81, DFA assignment, one would create a `DFAaccepts.pl` file in the
 helper folder containing
@@ -63,7 +63,7 @@ command(s) to print to stdout like
 4. For each of your driver, you must have a solution file with the same name but with .txt
 extension. These are the expected outputs (correct answers) for your drivers.
 
-Then, you run
+Then, you run the grader to grade all student files
 ```zsh
 zsh grader.zsh foldername
 ```
