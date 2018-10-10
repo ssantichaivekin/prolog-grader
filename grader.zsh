@@ -66,7 +66,7 @@ run-prolog () {
     ${timeoutcmd} 15s swipl --quiet -t halt -s $@
 }
 
-# return true of two texts are similar
+# return true if two texts are similar
 # use awk.
 similar-text () {
     # use awk to format both text files and then
