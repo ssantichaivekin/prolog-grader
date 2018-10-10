@@ -1,5 +1,5 @@
 Summary for demo-after-run/submissions/student1.pl
-demo-after-run/drivers/spam.pl
+test file: demo-after-run/drivers/spam.pl
 FAIL
 Output :
 a
@@ -15,9 +15,9 @@ d
 e
 f
 g
-demo-after-run/drivers/testA.pl
+test file: demo-after-run/drivers/testA.pl
 PASS
-demo-after-run/drivers/testB.pl
+test file: demo-after-run/drivers/testB.pl
 FAIL
 Output :
 a

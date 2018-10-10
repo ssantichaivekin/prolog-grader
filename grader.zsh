@@ -95,7 +95,7 @@ run-and-grade-all () {
         # for each pair of test case driver/solution file in test directory
         for testDriver in ${gradingDir}/drivers/*.pl ; do
             # create and write to summary file
-            echo ${testDriver} >> ${summaryFile}
+            echo 'test file:' ${testDriver} >> ${summaryFile}
             # find the test solution (expected output) by changing the word 
             # driver to solution. the solution should be a text file.
             testSolution=${testDriver:s/drivers/solutions/:s/pl/txt/}
