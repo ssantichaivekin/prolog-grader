@@ -9,6 +9,7 @@ CorrectTests: [score] / [total score]
 CorrectTests: [score] / [total score]
 ...
 ```
+and store the output of test cases in a folder for each student submission.
 
 ## Dependencies
 
