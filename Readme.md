@@ -72,8 +72,47 @@ In our example, our foldername is ./demo, so we will run
 zsh grader.zsh ./demo
 ```
 This will add a new folder to demo named `results` containing the summary and the outputs
-for each students. You can see what this looks like by looking at the demo-after-run folder
-in this repository.
+for each students. This is an example of a summary with three test cases. The student
+passes only the second and have wrong outputs for first and third.
+```
+Summary for demo-after-run/submissions/student1.pl
+test file: demo-after-run/drivers/spam.pl
+FAIL
+Output :
+a
+b
+b
+c
+d
+Solution :
+a
+b
+c
+d
+e
+f
+g
+test file: demo-after-run/drivers/testA.pl
+PASS
+test file: demo-after-run/drivers/testB.pl
+FAIL
+Output :
+a
+b
+b
+c
+d
+Solution :
+a
+b
+c
+d
+e
+f
+g
+
+CorrectTests: 1 / 3
+```
 
 Remark :
 1. If you are working on windows, the grader probably wouldn't work.
