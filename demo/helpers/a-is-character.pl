@@ -1,1 +1,0 @@
-isAlphabet(a).

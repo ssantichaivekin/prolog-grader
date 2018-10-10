@@ -1,0 +1,37 @@
+Summary for demo-after-run/submissions/student1.pl
+demo-after-run/drivers/spam.pl
+FAIL
+Output :
+a
+b
+b
+c
+d
+Solution :
+a
+b
+c
+d
+e
+f
+g
+demo-after-run/drivers/testA.pl
+PASS
+demo-after-run/drivers/testB.pl
+FAIL
+Output :
+a
+b
+b
+c
+d
+Solution :
+a
+b
+c
+d
+e
+f
+g
+
+CorrectTests: 1 / 3
