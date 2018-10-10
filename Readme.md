@@ -33,13 +33,12 @@ it is not running into an infinite loop. If you already have homebrew
 installed, run `brew install coreutils`.
 
 Make sure you also have `swipl` command installed and accessible by zsh.
-If you have prolog installed but cannot access it by the command line,
-try adding 
+If you have swipl prolog installed but cannot access it by the command line,
+try adding this line
 ```
-# install prolog
 PATH=$PATH:/Applications/SWI-Prolog.app/Contents/MacOS
 ```
-into your ~/.bash_profile and ~/.zshrc
+to your ~/.bash_profile and ~/.zshrc
 
 ## How to use / How it works
 
