@@ -25,14 +25,18 @@ CorrectTests: 3 / 3
 
 zsh, swipl, timeout.
 
-If you are working on Mac, you must first install zsh and timeout to make this
-work. Run `brew install zsh`.
+Instructions for mac:
+
+If you don't have zsh installed, you should follow this
+instruction [here](https://gist.github.com/derhuerst/12a1558a4b408b3b2b6e#file-mac-md),
+which will install zsh and homebrew.
 
 Timeout is used to time the execution of prolog files to make sure
 it is not running into an infinite loop. If you already have homebrew
 installed, run `brew install coreutils`.
 
 Make sure you also have `swipl` command installed and accessible by zsh.
+If you haven't installed prolog before, run `brew install swipl-prolog`.
 If you have swipl prolog installed but cannot access it by the command line,
 try adding this line
 ```zsh
@@ -117,8 +121,3 @@ CorrectTests: 1 / 3
 ## Remark
 1. If you are working on windows, the grader probably wouldn't work.
 2. This grader have not been rigorously tested. In fact, it has not been tested at all.
-
-
-
-
-   
