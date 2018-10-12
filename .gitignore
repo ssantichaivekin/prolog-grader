@@ -2,3 +2,4 @@ examples/*
 .DS_Store
 test.zsh
 problem1/submissions/*
+problem1/results/*
