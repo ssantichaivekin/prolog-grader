@@ -1,0 +1,23 @@
+Summary for problem1/submissions/bellzoe_22913215_69936934_dfa1.pl
+test file: problem1/drivers/test1.pl
+FAIL
+Output :
+Solution :
+truetest file: problem1/drivers/test2.pl
+FAIL
+Output :
+Solution :
+truetest file: problem1/drivers/test3.pl
+FAIL
+Output :
+Solution :
+truetest file: problem1/drivers/test4.pl
+FAIL
+Output :
+Solution :
+falsetest file: problem1/drivers/test5.pl
+FAIL
+Output :
+Solution :
+false
+CorrectTests: 0 / 5

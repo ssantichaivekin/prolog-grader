@@ -1,0 +1,4 @@
+ERROR: /Users/santisantichaivekin/Desktop/code/test/prolog-grader/problem1/drivers/test3.pl:1:
+	'<meta-call>'/1: Undefined procedure: accepts/2
+Warning: /Users/santisantichaivekin/Desktop/code/test/prolog-grader/problem1/drivers/test3.pl:1:
+	Goal (directive) failed: user:(accepts(q0,[0,0,0,0]),writeln(true);writeln(false))
