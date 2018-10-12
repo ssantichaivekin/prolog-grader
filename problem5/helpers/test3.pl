@@ -1,0 +1,1 @@
+:- (accepts(q0, [0, 0, 0, 0]), writeln('true')); writeln('false').
