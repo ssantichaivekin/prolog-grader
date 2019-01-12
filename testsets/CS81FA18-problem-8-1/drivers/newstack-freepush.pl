@@ -1,0 +1,1 @@
+:- forall(newStack([a, b, c, $], epsilon, a, X), writeln(X)).

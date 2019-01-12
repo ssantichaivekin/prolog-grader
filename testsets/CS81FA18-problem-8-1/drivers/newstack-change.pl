@@ -1,0 +1,1 @@
+:- forall(newStack([a, b, c, $], a, z, X), writeln(X)).

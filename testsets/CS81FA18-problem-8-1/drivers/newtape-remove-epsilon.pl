@@ -1,0 +1,1 @@
+:- forall(newTape([s, p, a, m], epsilon, X), writeln(X)).

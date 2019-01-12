@@ -1,0 +1,1 @@
+:- (newStack([a, b, c, $], a, epsilon, X), writeln('true')) ; writeln('false').

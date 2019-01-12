@@ -27,7 +27,8 @@ The output is supposed to be `true`.
 
 When designing a test case, it is best to only **use only true-false tests and use only one test per file**.
 True-false tests are better than enumeration (using forall predicate) tests. This is because the order of enumeration
-is not guaranteed in prolog. 
+is not guaranteed in prolog. When you use `writeln` to print and test other things, make sure you know what you
+are doing.
 Our grader script ignores whitespace mismataches **but care about the order in which things occur**.
 A student will get a +1 score if they pass one test file. So if you write every tests in one file, then a student
 will either get a score of 0 or 1.
@@ -87,9 +88,16 @@ CorrectTests: [score] / [total score]
 and store the outputs and errors of each test case in a new folder named results.
 You can see an example of a results file in demo-after-run folder.
 
+There are some examples from last year. See testsets folder.
+
 ## Remarks
 1. It is often easier to read if you send the output of this script to text file.
 2. There are some problems that you should be quite careful using the autograder.
    The man-hare-fox problem in CS81 FA18, for example, has many valid answers.
    The students are only asked to write a code that succesfully finds one of them.
    So the one that they find might not be the same one as the one in the test case.
+   When a student got a problem wrong, it is best to check their code how they got
+   it wrong if possible.
+3. The reason that we have one test case per file instead of one file of many tests
+   is because if we run into a time-limit exceed or some error, the students would
+   still get the points for the later cases.
