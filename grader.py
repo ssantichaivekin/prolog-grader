@@ -17,6 +17,7 @@ test output and error of all students. Also print out short results and
 student score.
 '''
 
+import argparse
 import subprocess
 import sys
 import os
@@ -100,6 +101,13 @@ def run_and_grade_all():
                 except subprocess.TimeoutExpired:
                     print("Submission timeout")
                     out, err = "timeout", "timeout"
+                except FileNotFoundError as exception:
+                    print(exception)
+                    print("This is most likely caused by not having swi-prolog installed")
+                    print("First install homebrew, see https://brew.sh for instructions.")
+                    print("Then install swipl by typing in the terminal: ")
+                    print("brew install swi-prolog")
+                    sys.exit(1)
 
                 # write the output and error to file
                 with open(
@@ -136,7 +144,22 @@ def run_and_grade_all():
 
 
 if __name__ == "__main__":
-    if not check_driver_solution():
-        sys.exit(1)
+    parser = argparse.ArgumentParser(description="Prolog Grader (requires swipl).")
+    parser.add_argument("folderpath",
+        help="Path to the folder that contains drivers, helpers, submissions, and "
+        "solutions")
+
+    args = parser.parse_args()
+    print("Running the prolog grader on {}".format(args.folderpath))
+    print()
+    os.chdir(args.folderpath)
+
+    try:
+        if not check_driver_solution():
+            sys.exit(1)
+    except:
+        print("There is an error in checking whether the driver and the solution for "
+              "each test case matches. Please make sure you are in the correct folder "
+              "and that the folder is formatted correctly (see readme).")
 
     run_and_grade_all()
