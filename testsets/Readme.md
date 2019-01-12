@@ -3,4 +3,4 @@ I could only find some of them in my computer. Please do not look at the test ca
 if you are taking or is planning to take CS81 in the future.
 
 The example submissions contain real student submissions from CS81-FA18 with their name removed.
-Not all submissions are correct.
+Not all example submissions are correct.
