@@ -52,7 +52,7 @@ Look in the **demo** folder and spend ten minutes to understand the structure of
 The folder has four parts helpers, submissions, drivers, and solutions.
 1. **Helpers** run in every tests. The helpers (prolog .pl files) will get run in
     alphabetical order. You cannot have the same predicates defined in different
-    files, so if a student is supposed to write the `accepts` predicate, you cannot
+    files, so if a student is supposed to write the `accepts` predicate in their submissions file, you cannot
     add more rules to `accepts` in the helper files. 
     ([reference](http://www.swi-prolog.org/FAQ/Multifile.html))
     In DFA assignments, one would create `DFAaccepts.pl` helper as follows:
