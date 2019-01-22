@@ -10,21 +10,20 @@ Click *Download Submissions*.
 
 ## Introduction
 
-This is a python script that uses swi-prolog executable to run prolog scripts. The idea is that
-we can make the prolog console write something to standard output using the `writeln` predicate. Every time
+This is a python script that uses swi-prolog executable to run prolog scripts. Although we generally use prolog in interactive mode where we check whether some predicates are true, we can also make the prolog console write something to standard output (just like a python or C++ program) using the `writeln` predicate. Every time
 writeln evaluates, it will print its argument. We then write a script to compare the output of swi-prolog
 with the correct output.
-For example, one can write a test case as:
+For example, one can write a test as:
 
 `:- (isPalindrome([0, 1, 1, 0]), writeln('true')) ; writeln('false').`
 
-Here, you would ask the student to define the `isPalindrome` predicate. This script will then either print true or false depending on what the student has implemented. The correct output is `true`, so if this script prints true, the student will recieve a score.
+It reads: If `[0, 1, 1, 0]` is a palindrome, print true. Otherwise, print false. Here, you would ask the student to define the `isPalindrome` predicate. This script will then either print true or false depending on what the student has implemented. The correct output is `true`, so if this script prints true, the student will recieve a score.
 
 When designing a test case, it is best to only **use only true-false tests and use only one test per file**.
 True-false tests are better than enumeration (using forall predicate) tests. This is because the order of enumeration
 is not guaranteed in prolog. When you use `writeln` to print and test other things, make sure you know what you
 are doing.
-Our grader script ignores whitespace mismataches **but care about the order in which things occur**.
+Our grader script ignores whitespace mismataches but care about the order in which things occur.
 A student will get a +1 score if they pass one test file. So if you write every tests in one file, then a student
 will either get a score of 0 or 1.
 
