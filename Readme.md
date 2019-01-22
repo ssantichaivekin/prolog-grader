@@ -3,27 +3,22 @@ canvas.
 
 ## How do I download the student assignments?
 
-On the *Grades* section of the page, if you hover over the problem name, a dropdown menu will appear.
+On the *Grades* section of the canvas, hover over the problem name and a dropdown menu will appear.
 Click *Download Submissions*.
 
 ![Download Submissions](download-submissions.png)
 
 ## Introduction
 
-This is a python script that uses swi-prolog executable to run multiple prolog files. The idea is that
-we can make the prolog console write something to stdout by using the `writeln` predicate. Every time
+This is a python script that uses swi-prolog executable to run prolog scripts. The idea is that
+we can make the prolog console write something to standard output using the `writeln` predicate. Every time
 writeln evaluates, it will print its argument. We then write a script to compare the output of swi-prolog
-with the expected output we already have.
+with the correct output.
 For example, one can write a test case as:
-
-`:- (isAlphabet(a), writeln('true')) ; writeln('false').`
-
-That is, if an existing variable `a` is considered `isAlphabet` by other predicates, then it will print
-`true`. It will print `false` otherwise. A more realistic example would be:
 
 `:- (isPalindrome([0, 1, 1, 0]), writeln('true')) ; writeln('false').`
 
-The output is supposed to be `true`.
+Here, you would ask the student to define the `isPalindrome` predicate. This script will then either print true or false depending on what the student has implemented. The correct output is `true`, so if this script prints true, the student will recieve a score.
 
 When designing a test case, it is best to only **use only true-false tests and use only one test per file**.
 True-false tests are better than enumeration (using forall predicate) tests. This is because the order of enumeration
@@ -55,7 +50,7 @@ The folder has four parts helpers, submissions, drivers, and solutions.
     files, so if a student is supposed to write the `accepts` predicate in their submissions file, you cannot
     add more rules to `accepts` in the helper files. 
     ([reference](http://www.swi-prolog.org/FAQ/Multifile.html))
-    In DFA assignments, one would create `DFAaccepts.pl` helper as follows:
+    In DFA assignments, for example, one would create `DFAaccepts.pl` helper as follows:
     ```prolog
     accepts(Q, []) :- accepting(Q).
     accepts(Q, [Symbol | Rest]) :- transition(Q, Symbol, NewQ), accepts(NewQ, Rest).
@@ -100,4 +95,4 @@ There are some examples from last year. See testsets folder.
    it wrong if possible.
 3. The reason that we have one test case per file instead of one file of many tests
    is because if we run into a time-limit exceed or some error, the students would
-   still get the points for the later cases.
+   still get the points for the later test cases.
