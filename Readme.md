@@ -65,7 +65,7 @@ The folder has four parts helpers, submissions, drivers, and solutions.
    For each of your driver, you must have a solution file with the same name but with .txt
    extension. These are the expected outputs (correct answers) for your drivers.
 
-WHen you want to test the submissions, you create the four folders and add the necessary components.
+When you want to test the submissions, you create the four folders and add the necessary components.
 
 You run this python script by calling `python3 grader.py [path-to-folder]` where path-to-folder is
 the path to a folder containg the four folders listed above. Assuming that you
