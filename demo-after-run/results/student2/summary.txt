@@ -1,9 +1,8 @@
-Summary for demo-after-run/submissions/student2.pl
-test file: demo-after-run/drivers/spam.pl
+summary for student2.pl
+test file: spam.pl
 PASS
-test file: demo-after-run/drivers/testA.pl
+test file: testB.pl
 PASS
-test file: demo-after-run/drivers/testB.pl
+test file: testA.pl
 PASS
-
-CorrectTests: 3 / 3
+correct tests: 3 / 3

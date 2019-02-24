@@ -33,13 +33,26 @@ def check_driver_solution():
     for driver in os.listdir("drivers"):
         name, ext = os.path.splitext(driver)
         if (ext != '.pl') :
-            print("{} driver is not a prolog file")
+            print("{} driver is not a prolog file".format(driver))
+            print("Please remove the file from the drivers directory.")
+            print()
+            continue
             
         solution = os.path.join("solutions", "{}.txt".format(name))
         if not os.path.exists(solution):
             print("{} has no matching solution".format(driver), file=sys.stderr)
             print("expected file: {}".format(solution), file=sys.stderr)
+            print()
             complete = False
+
+    for submission in os.listdir("submissions"):
+        name, ext = os.path.splitext(submission)
+        if (ext != '.pl') :
+            print("{} submission is not a prolog file".format(submission))
+            print("Please remove the file from the submissions directory.")
+            print()
+            continue
+
     return complete
 
 
@@ -63,12 +76,14 @@ def run_prolog(helper_files, submission, driver):
             os.path.join("drivers", driver),
         ),
         timeout=TIMEOUT,
-        capture_output=True,
+        stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE
     )
     return (process.stdout.decode("utf8"), process.stderr.decode("utf8"))
 
 
 def run_and_grade_all():
+    all_incorrects = []
     os.makedirs("results", exist_ok=True)
     helper_files = os.listdir("helpers")
     for submission in os.listdir("submissions"):
@@ -114,6 +129,7 @@ def run_and_grade_all():
                     os.path.join(submission_folder, "{}-out.txt".format(driver_name)),
                     "w",
                 ) as f_out:
+                    print("debug", out)
                     f_out.write(out)
                 with open(
                     os.path.join(submission_folder, "{}-err.txt".format(driver_name)),
@@ -139,8 +155,15 @@ def run_and_grade_all():
                     print(solution, file=summary_file)
 
             correct_summary = "correct tests: {} / {}".format(correct, total)
+            if correct != total :
+                all_incorrects.append(name)
             print(correct_summary)
             print(correct_summary, file=summary_file)
+
+    print()
+    print("People with not all correct outputs:")
+    for incorrect_submission in all_incorrects :
+        print("   ", incorrect_submission)
 
 
 if __name__ == "__main__":

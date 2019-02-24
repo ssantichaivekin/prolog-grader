@@ -1,31 +1,14 @@
-Summary for demo-after-run/submissions/student1.pl
-test file: demo-after-run/drivers/spam.pl
+summary for student1.pl
+test file: spam.pl
 FAIL
-Output :
+output:
 a
 b
 b
 c
 d
-Solution :
-a
-b
-c
-d
-e
-f
-g
-test file: demo-after-run/drivers/testA.pl
-PASS
-test file: demo-after-run/drivers/testB.pl
-FAIL
-Output :
-a
-b
-b
-c
-d
-Solution :
+
+solution:
 a
 b
 c
@@ -34,4 +17,24 @@ e
 f
 g
 
-CorrectTests: 1 / 3
+test file: testB.pl
+FAIL
+output:
+a
+b
+b
+c
+d
+
+solution:
+a
+b
+c
+d
+e
+f
+g
+
+test file: testA.pl
+PASS
+correct tests: 1 / 3
