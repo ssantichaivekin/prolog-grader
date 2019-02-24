@@ -95,3 +95,5 @@ There are some examples from last year. See testsets folder.
 3. The reason that we have one test case per file instead of one file of many tests
    is because if we run into a time-limit exceed or some error, the students would
    still get the points for the later test cases.
+
+Thanks Kye W. Shi for the first version of python rewrite.
