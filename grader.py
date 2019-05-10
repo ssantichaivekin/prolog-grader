@@ -36,6 +36,7 @@ def check_driver_solution():
             print("{} driver is not a prolog file".format(driver))
             print("Please remove the file from the drivers directory.")
             print()
+            complete = False
             continue
             
         solution = os.path.join("solutions", "{}.txt".format(name))
@@ -51,6 +52,7 @@ def check_driver_solution():
             print("{} submission is not a prolog file".format(submission))
             print("Please remove the file from the submissions directory.")
             print()
+            complete = False
             continue
 
     return complete
@@ -129,7 +131,6 @@ def run_and_grade_all():
                     os.path.join(submission_folder, "{}-out.txt".format(driver_name)),
                     "w",
                 ) as f_out:
-                    print("debug", out)
                     f_out.write(out)
                 with open(
                     os.path.join(submission_folder, "{}-err.txt".format(driver_name)),
