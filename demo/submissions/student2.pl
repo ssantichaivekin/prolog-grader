@@ -1,3 +1,4 @@
+% This is an example of an incorrect solution (see readme).
 isAlphabet(a).
 isAlphabet(b).
 isAlphabet(c).

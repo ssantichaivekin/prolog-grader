@@ -1,8 +1,13 @@
 summary for student2.pl
-test file: spam.pl
-PASS
+test file: testC.pl
+FAIL
+output:
+true
+
+solution:
+false
 test file: testB.pl
 PASS
 test file: testA.pl
 PASS
-correct tests: 3 / 3
+correct tests: 2 / 3

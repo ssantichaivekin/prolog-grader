@@ -1,1 +1,1 @@
-:- forall(isAlphabet(X), writeln(X)).
+:- (isAlphabet(b), writeln('true')) ; writeln('false').

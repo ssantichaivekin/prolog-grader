@@ -1,40 +1,8 @@
 summary for student1.pl
-test file: spam.pl
-FAIL
-output:
-a
-b
-b
-c
-d
-
-solution:
-a
-b
-c
-d
-e
-f
-g
-
+test file: testC.pl
+PASS
 test file: testB.pl
-FAIL
-output:
-a
-b
-b
-c
-d
-
-solution:
-a
-b
-c
-d
-e
-f
-g
-
+PASS
 test file: testA.pl
 PASS
-correct tests: 1 / 3
+correct tests: 3 / 3

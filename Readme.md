@@ -21,8 +21,7 @@ It reads: If `[0, 1, 1, 0]` is a palindrome, print true. Otherwise, print false.
 
 When designing a test case, it is best to only **use only true-false tests and use only one test per file**.
 True-false tests are better than enumeration (using forall predicate) tests. This is because the order of enumeration
-is not guaranteed in prolog. When you use `writeln` to print and test other things, make sure you know what you
-are doing.
+is not guaranteed in prolog.
 Our grader script ignores whitespace mismataches but care about the order in which things occur.
 A student will get a +1 score if they pass one test file. So if you write every tests in one file, then a student
 will either get a score of 0 or 1.
@@ -59,11 +58,29 @@ The folder has four parts helpers, submissions, drivers, and solutions.
 3. **Drivers** are your prolog testers files. These .pl files contain prolog
     command(s) to print to stdout to check whether the submission is correct
     ```prolog
-    :- forall(spam(X), writeln(X)).
+    :- (isAlphabet(a), writeln('true')) ; writeln('false').
     ```
 4. **Solutions** are the solutions for your drivers.
    For each of your driver, you must have a solution file with the same name but with .txt
    extension. These are the expected outputs (correct answers) for your drivers.
+
+In the demo, let's assume that the students are assigned to write a prolog file
+with `isAlphabet(X)` predicate which should says `true` if and only if X is the symbol a, b, c, or d.
+We test this with three tests. There are two positive tests which checks `isAlphabet(a)` and
+`isAlphabet(b)` gives true. There is one negative test which checks that `isAlphabet(g)` is false.
+
+When you ran the command `python3 grader.py demo` it will produce the following:
+```
+Running the prolog grader on demo-after-run
+
+##### grading submission: student1.pl #####
+correct tests: 3 / 3
+##### grading submission: student2.pl #####
+correct tests: 2 / 3
+
+People with not all correct outputs:
+    student2
+```
 
 When you want to test the submissions, you create the four folders and add the necessary components.
 
