@@ -69,7 +69,7 @@ containing `isAlphabet(X)` predicate which should says `true` if and only if X i
 We test this with three tests. There are two positive tests which checks `isAlphabet(a)` and
 `isAlphabet(b)` gives true. There is one negative test which checks that `isAlphabet(g)` is false.
 
-When you ran the command `python3 grader.py demo` it will produce the following:
+When you ran the command `python3 grader.py demo` it will produce the following text to console:
 ```
 Running the prolog grader on demo-after-run
 
