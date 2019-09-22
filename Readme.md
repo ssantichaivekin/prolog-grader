@@ -41,10 +41,10 @@ to your .bash_profile
 
 ## How to use
 
-Look in the **demo** folder and spend ten minutes to understand the structure of the grader folder.
-The folder has four parts helpers, submissions, drivers, and solutions.
-1. **Helpers** run in every tests. The helpers (prolog .pl files) will get run in
-    alphabetical order. You cannot have the same predicates defined in different
+Create a folder containing four subfolders: helpers, submissions, drivers, and solutions.
+
+1. **Helpers** contains prolog .pl files that run in every tests in alphabetical order.
+    You cannot have the same predicates defined in different
     files, so if a student is supposed to write the `accepts` predicate in their submissions file, you cannot
     add more rules to `accepts` in the helper files. 
     ([reference](http://www.swi-prolog.org/FAQ/Multifile.html))
@@ -65,7 +65,7 @@ The folder has four parts helpers, submissions, drivers, and solutions.
    extension. These are the expected outputs (correct answers) for your drivers.
 
 In the demo, let's assume that the students are assigned to write a prolog file
-with `isAlphabet(X)` predicate which should says `true` if and only if X is the symbol a, b, c, or d.
+containing `isAlphabet(X)` predicate which should says `true` if and only if X is the symbol a, b, c, or d.
 We test this with three tests. There are two positive tests which checks `isAlphabet(a)` and
 `isAlphabet(b)` gives true. There is one negative test which checks that `isAlphabet(g)` is false.
 
@@ -102,7 +102,7 @@ You can see an example of a results file in demo-after-run folder.
 There are some examples from last year. See testsets folder.
 
 ## Remarks
-1. It is often easier to read if you send the output of this script to text file.
+1. It is often easier to read if you redirect the output of this script to text file.
 2. There are some problems that you should be quite careful using the autograder.
    The man-hare-fox problem in CS81 FA18, for example, has many valid answers.
    The students are only asked to write a code that succesfully finds one of them.
