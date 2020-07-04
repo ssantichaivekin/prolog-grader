@@ -1,4 +1,4 @@
-A zsh prolog grader designed to grade HMC CS81 prolog assignments downloaded from
+A zsh/python prolog grader designed to grade HMC CS81 prolog assignments downloaded from
 canvas.
 
 ## How do I download the student assignments?
